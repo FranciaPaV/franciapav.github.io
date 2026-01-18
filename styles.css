@@ -1,0 +1,288 @@
+/* Base del documento */
+html, body {
+  margin: 0;
+  padding: 0;
+  
+  font-family: Arial, sans-serif;
+  background: #fcfcfc;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+    background: #8e8ee5;
+    text-align: center;
+    padding-top: 0.5%;
+    padding-bottom: 3%;
+}
+
+header p{
+    font-size: large;
+    color:#a9adb3;
+}
+
+/* Contenedor general */
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: auto;
+  padding: 20px 0;
+}
+
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center ;
+  gap: 2rem;
+  align-items: center;
+}
+
+.social-links a {
+  font-size: 1.8rem;
+  color: #fcfcfc;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #0077b5; /* azul LinkedIn */
+}
+
+.social-links a[href*="github"]:hover {
+  color: #000;
+}
+
+.social-links a:focus {
+  outline: 2px solid #0077b5;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Títulos */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-top: 1.8rem;
+  margin-bottom: 0.6rem;
+  text-align: center;
+}
+
+.programas {
+  font-size: 0.8rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.6rem;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Sección sobre mí */
+
+.skills {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.skills h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #000;
+}
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.skill {
+  background-color: #e9eef5;
+  color: #000;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px; /* hace la pastilla */
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+#about {
+  padding: 2rem 0;
+  text-align: center;
+  color: #000;
+}
+
+#about p {
+  max-width: 900px;   /* ancho cómodo de lectura */
+  margin: 0 auto;     /* centra horizontalmente */
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* Proyectos */
+.projects {
+  margin: 4rem auto;
+  max-width: 1100px;
+  padding: 0 1rem;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  color: #000;
+}
+
+.projects h3 {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+  color: #000;
+}
+
+/*.projects h2::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background-color: #2563eb;
+  display: block;
+  margin-top: 0.5rem;
+}*/
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card img {
+  width: 100%;
+  border-radius: 3%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.project-content h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  
+}
+
+.project-content h4 {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #2563eb;
+}
+
+.tech-stack  {
+  
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.project-content p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #444;
+}
+
+.project-link {
+  margin-top: auto;
+  align-self: flex-start;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #111;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.project-link:hover {
+  background-color: #17bd3b;
+  color: #fff;
+}
+
+.project-link:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+    padding: 0 1rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-content h3 {
+    font-size: 1.1rem;
+  }
+
+  #about p {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .social-links {
+    gap: 1.5rem;
+  }
+
+  .social-links a {
+    font-size: 1.5rem;
+  }
+
+  .skills-list {
+    gap: 0.6rem;
+  }
+
+  .skill {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+/* Pie de página */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 0.8rem 0;
+  font-size: 0.7rem;
+  color: #555;
+}
